@@ -158,7 +158,7 @@ else
 %.list: %
 	objdump -C -M intel -D $< > $@
 
-$(KBUILD)/harddrive.bin: $(KBUILD)/kernel $(BUILD)/filesystem.bin bootloader/$(ARCH)/**
+$(KBUILD)/harddrive.bin: $(KBUILD)/kernel bootloader/$(ARCH)/**
 	nasm -f bin -o $@ -D ARCH_$(ARCH) -ibootloader/$(ARCH)/ bootloader/$(ARCH)/harddrive.asm
 
 qemu: $(KBUILD)/harddrive.bin
