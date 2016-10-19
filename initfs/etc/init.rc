@@ -1,5 +1,5 @@
 initfs:bin/pcid initfs:etc/pcid.toml
-initfs:bin/redoxfs disk:0
+initfs:bin/redoxfs initfs:harddrive.bin
 cd file:
 export PATH file:bin
 run file:etc/init.rc
