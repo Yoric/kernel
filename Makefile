@@ -245,7 +245,8 @@ $(BUILD)/initfs.rs: \
 		initfs/bin/ahcid \
 		initfs/bin/pcid \
 		initfs/bin/redoxfs \
-		initfs/etc/**
+		initfs/etc/** \
+		initfs/harddrive.bin
 	echo 'use collections::BTreeMap;' > $@
 	echo 'pub fn gen() -> BTreeMap<&'"'"'static [u8], (&'"'"'static [u8], bool)> {' >> $@
 	echo '    let mut files: BTreeMap<&'"'"'static [u8], (&'"'"'static [u8], bool)> = BTreeMap::new();' >> $@
